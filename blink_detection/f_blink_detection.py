@@ -6,13 +6,12 @@ from imutils import face_utils
 from scipy.spatial import distance as dist
 
 
-
 class eye_blink_detector():
     def __init__(self):
         # cargar modelo para deteccion de puntos de ojos
         self.predictor_eyes = dlib.shape_predictor(cfg.eye_landmarks)
 
-    def eye_blink(self,gray,rect,COUNTER,TOTAL):
+    def eye_blink(self, gray, rect, COUNTER, TOTAL):
         (lStart, lEnd) = face_utils.FACIAL_LANDMARKS_IDXS["left_eye"]
         (rStart, rEnd) = face_utils.FACIAL_LANDMARKS_IDXS["right_eye"]
         # determine the facial landmarks for the face region, then
@@ -41,9 +40,9 @@ class eye_blink_detector():
                 TOTAL += 1
             # reset the eye frame counter
             COUNTER = 0
-        return COUNTER,TOTAL
+        return COUNTER, TOTAL
 
-    def eye_aspect_ratio(self,eye):
+    def eye_aspect_ratio(self, eye):
         # compute the euclidean distances between the two sets of
         # vertical eye landmarks (x, y)-coordinates
         A = dist.euclidean(eye[1], eye[5])

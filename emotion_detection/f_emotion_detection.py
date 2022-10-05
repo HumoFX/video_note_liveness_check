@@ -2,9 +2,9 @@ import config as cfg
 import cv2
 import numpy as np
 from keras.models import load_model
-from keras.preprocessing.image import img_to_array
+from tensorflow.keras.utils import img_to_array
 
-class predict_emotions():
+class PredictEmotions:
     def __init__(self):
         # cargo modelo de deteccion de emociones
         self.model = load_model(cfg.path_model)
