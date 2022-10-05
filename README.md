@@ -8,12 +8,8 @@ face liveness detection activate, the script asks the person to generate an acti
 # How to run:
 The code is tested in python 3.7.8 and macOS Catalina
 
-<pre><code>python face_anti_spoofing.py </code></pre>
+<pre><code>uvicorn app:app --reload </code></pre>
 
-
-![alt text](https://github.com/mevo12318/face_liveness_detection-Anti-spoofing/blob/master/results/lifeness_ok.gif)
-
-![alt text](https://github.com/mevo12318/face_liveness_detection-Anti-spoofing/blob/master/results/lifeness_fail.gif)
 
 # References
 
