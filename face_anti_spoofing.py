@@ -33,7 +33,7 @@ def check_liveness(video_name, question_id):
     # Load the predictor
     (lStart, lEnd) = face_utils.FACIAL_LANDMARKS_IDXS["left_eye"]
     (rStart, rEnd) = face_utils.FACIAL_LANDMARKS_IDXS["right_eye"]
-    predictor = dlib.shape_predictor("shape_predictor_68_face_landmarks.dat")
+    predictor = dlib.shape_predictor("blink_detection/model_landmarks/shape_predictor_68_face_landmarks.dat")
     cv2.namedWindow('liveness_detection')
     cam = cv2.VideoCapture(video_name)
     # cam = cv2.VideoCapture(0)
